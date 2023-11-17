@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Publicaci&oacute;n de Propiedad</title>
+    <link rel="stylesheet" type="text/css" href="../css/estiloF.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Publicaci&oacute;n de Propiedad</h1>
+        <form action="../php/envioF.php" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Informaci&oacute;n General:</legend>
+                <label for="titulo">T&iacute;tulo del Anuncio:</label>
+                <input type="text" id="titulo" name="titulo" required>
+                
+                <label for="ubicacion">Ubicaci&oacute;n:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+               
+                
+                <label for="tipo">Tipo de Propiedad:</label>
+                <select id="tipo_propiedad" name="tipo_propiedad" required>
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="piso">Suite</option>
+                    <option value="chalet">Chalet</option>
+                    <option value="otro">Lote/Terreno</option>
+                </select><br><br>
+                
+                <label for="descripcion">Descripci&oacute;n:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Detalles de la Propiedad:</legend>
+                <label for="habitaciones">N&uacute;mero de Habitaciones:</label>
+                <input type="number" id="habitaciones" name="habitaciones" min="0" required>
+                
+                <label for="banos">N&uacute;mero de pisos:</label>
+                <input type="number" id="banos" name="banos" min="0" required>
+                
+                <label for="area">&Aacute;rea (m²):</label>
+                <input type="number" id="area" name="area" min="0" required>
+				</fieldset>
+				<fieldset>
+				<legend>Caracter&iacute;sticas:</legend>
+                
+                <label for="parqueadero">Parqueadero:</label>
+                <input type="checkbox" id="parqueadero" name="parqueadero">
+                
+                <label for="amoblado">Amoblado:</label>
+                <input type="checkbox" id="amoblado" name="amoblado">
+				
+				<label for="pisciona">Piscina:</label>
+				<input type="checkbox" id="pisciona" name="pisciona">
+
+				<label for="cocina">Cocina Equipada:</label>
+				<input type="checkbox" id="cocina" name="cocina">
+
+				<label for="lavadora">Lavadora:</label>
+				<input type="checkbox" id="lavadora" name="lavadora">
+
+				<label for="jardin">Jard&iacute;n:</label>
+				<input type="checkbox" id="jardin" name="jardin">
+
+				<label for="microondas">Microondas:</label>
+				<input type="checkbox" id="microondas" name="microondas">
+
+				<label for="tv">Televisi&oacute;n:</label>
+				<input type="checkbox" id="tv" name="tv">
+
+				<label for="aireacondicionado">Aire Acondicionado:</label>
+				<input type="checkbox" id="aireacondicionado" name="aireacondicionado">
+
+				<label for="calefaccion">Calefacci&oacute;n:</label>
+				<input type="checkbox" id="calefaccion" name="calefaccion">
+
+				<label for="chimenea">Chimenea:</label>
+				<input type="checkbox" id="chimenea" name="chimenea">
+
+            </fieldset>
+            
+            <fieldset>
+                <legend>Informaci&oacute;n de Contacto:</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" title="Ingresa solo letras y espacios">
+
+                
+                <label for="telefono">Tel&eacute;fono:</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]+" title="Ingresa solo números" >
+
+                
+                <label for="correo">Correo Electr&oacute;nico:</label>
+                <input type="email" id="correo" name="correo" required pattern="[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com)$" title="Ingresa un correo válido (@gmail.com o @hotmail.com)">
+
+
+            </fieldset>
+            
+			<fieldset>
+                <legend>Fotos de la Propiedad:</legend>
+                <input type="file" id="fotos" name="fotos[]" multiple accept="image/*" required>
+            </fieldset>
+            
+            <input type="submit" value="Publicar">
+        </form>
+    </div>
+</body>
+</html>
+

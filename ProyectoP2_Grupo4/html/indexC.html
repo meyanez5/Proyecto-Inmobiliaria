@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de informacion.</title>
+  <link href="../css/estiloC.css" rel="stylesheet" type="text/css">
+  <link href="css/estilo-footer.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+
+<div class="container">
+  <h1>Formulario de informacion para comprar.</h1>
+  <form action="../php/envioC.php" method="POST">
+        <label for="nombre">Nombre completo:</label>
+        <input type="nombre" id="nombre" name="nombre" pattern="[a-zA-Z ]+" required><br><br>
+        
+        <label for="direccion">Direcci&oacute;n actual:</label>
+        <input type="direccion" id="direccion" name="direccion" pattern="[a-zA-Z0-9\s\W]+" required><br><br>
+
+        
+        <label for="telefono">N&uacute;mero de tel&eacute;fono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" required><br><br>
+	  
+	  <label for="cedula">N&uacute;mero de cedula:</label>
+        <input type="cedula" id="cedula" name="cedula" pattern="[0-9]+" required><br><br>
+        
+        <label for="email">Correo electr&oacute;nico:</label>
+        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com)" required><br><br>
+        
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+	  
+	    <label for="Ciudad">Ciudad:</label>
+        <input type="ciudad" id="ciudad" name="ciudad" pattern="[a-zA-Z0-9._%+-]" required><br><br>
+	  
+	    <label for="num_personas">N&uacute;mero de personas que ocupar&aacute;n la vivienda:</label>
+        <input type="num_personas" id="num_personas" name="num_personas" pattern="[0-9]+"  required><br>
+        
+        <label for="estado_civil">Estado civil:</label>
+        <select type="estado_civil" id="estado_civil" name="estado_civil" required>
+            <option value="soltero">Soltero</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viudo">Viudo</option>
+        </select><br>
+
+        <label for="tipo_propiedad">Tipo de propiedad:</label>
+        <select id="tipo_propiedad" name="tipo_propiedad" required>
+            <option value="casa">Casa</option>
+            <option value="departamento">Departamento</option>
+            <option value="piso">Suite</option>
+            <option value="chalet">Chalet</option>
+            <option value="otro">Lote/Terreno</option>
+			</select><br>
+			
+			<fieldset>
+				<legend><strong>Caracter&iacute;sticas:</strong></legend>
+                
+                <label for="baño"> 1 o mas ba&ntilde;os:</label>
+                <input type="checkbox" id="baño" name="baño">
+                
+                <label for="estacionamiento">1 o mas estacionamientos:</label>
+                <input type="checkbox" id="estacionamiento" name="estacionamiento">
+				
+				<label for="closets">Closets:</label>
+				<input type="checkbox" id="closets" name="closets">
+
+				<label for="guardiania">Guardiania/Seguridad privada:</label>
+				<input type="checkbox" id="guardiania" name="guardiania">
+
+				<label for="jardin">Jard&iacute;n:</label>
+				<input type="checkbox" id="jardin" name="jardin">
+
+            </fieldset><br>
+			 
+	    <label for="tipo_habitaciones">Habitaciones:</label>  
+        <select id="tipo_habitaciones" name="tipo_habitaciones" required>
+            <option value="1 habitacion">1 habitacion</option>
+            <option value="2 habitaciones">2 habitaciones</option>
+            <option value="3 habitaciones">3 habitaciones</option>
+            <option value="4 habitaciones">4 habitaciones</option>
+            <option value="mas habitaciones">Mas habitaciones</option>
+        </select><br><br>
+			 
+        <input type="submit" value="Enviar">
+    </form>
+	
+	
+  </div>
+
+<footer class="footer">	
+</footer>
+</body>
+</html>

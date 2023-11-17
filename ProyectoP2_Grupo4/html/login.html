@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de sesión</title>
+	<link href="../css/estilo.css" rel="stylesheet" type="text/css">
+<script>
+        // Arreglo de usuarios y contraseñas
+        var usuarios = [
+            { usuario: "WAM", contraseña: "123456" },
+        ];
+
+        // Función para validar el inicio de sesión
+        function validarInicioSesion() {
+            var usuario = document.getElementById("usuario").value;
+            var contraseña = document.getElementById("contraseña").value;
+
+            // Verificar si las credenciales coinciden con los valores en el arreglo
+            for (var i = 0; i < usuarios.length; i++) {
+                if (usuario === usuarios[i].usuario && contraseña === usuarios[i].contraseña) {
+                    window.location.href = "../html/Alquilar.html";
+                    return;
+                }
+            }
+
+            // Si no se encuentra una coincidencia, mostrar un mensaje de error
+            var errorMensaje = document.getElementById("error-mensaje");
+            errorMensaje.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="user-info">
+        <h2>INICIAR SESION</h2>
+    </div>
+    <div class="login-form">
+		<img src="../img/logo2.png" width="173" height="169" alt="user-login"/>
+        <form>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" required>
+                  <br>
+            <input type="button" value="Iniciar Sesión" onclick="validarInicioSesion()">
+
+            <div class="error-message" id="error-mensaje" style="display: none;">
+                Credenciales incorrectas. Por favor, inténtalo nuevamente.
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
